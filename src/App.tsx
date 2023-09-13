@@ -1,6 +1,7 @@
 import { Container, Stack, Typography } from '@mui/material'
 import './App.css'
 import { JavaScriptLogo } from './JavaScriptLogo'
+import Start from '@/components/Start'
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
         >
           <JavaScriptLogo />
           <Typography variant="h2" component="h1">
-            Javascript Quizz
+            Javascript Quiz
           </Typography>
         </Stack>
+
+        <Start />
       </Container>
     </main>
   )
