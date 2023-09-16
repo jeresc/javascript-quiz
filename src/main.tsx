@@ -1,4 +1,5 @@
-import React from 'react'
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
+
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
@@ -8,4 +9,15 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />)
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+})
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>
+)
